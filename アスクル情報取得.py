@@ -37,7 +37,7 @@ def get_product_info(url):
                 price = text
                 break
     if not price:
-        price = "値段：取得できませんでした"
+        price = ""
 
     # 販売単位
     quantity = ""
@@ -45,7 +45,7 @@ def get_product_info(url):
         quantity = tag.strip()
         break
     if not quantity:
-        quantity = "販売単位：取得できませんでした"
+        quantity = ""
 
     # JANコード
     jan = ""
@@ -57,7 +57,7 @@ def get_product_info(url):
             jan = tag.strip()
         break
     if not jan:
-        jan = "JANコード：取得できませんでした"
+        jan = ""
 
     return {
         "商品名": name,
